@@ -20,12 +20,13 @@ void Db_Transactions::connect()
 {
     if(!db.isValid())
         db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/exec/acr_main.db");
+    db.setDatabaseName("../../sales_date_filter.db");
     if(!db.open()){
         db.close();
         return;
+    }else{
+        qDebug() << "Veri tabanı bağlantısı başarılı";
     }
-    qDebug() << "Veri tabanı bağlantısı başarılıı";
 }
 
 QSqlQuery Db_Transactions::select(QString queryString)

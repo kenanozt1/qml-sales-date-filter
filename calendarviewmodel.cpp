@@ -23,7 +23,7 @@ QVariant CalendarViewModel::data(const QModelIndex &index, int role) const
 
     auto receipt = receipts.at(index.row());
     auto role_enum = static_cast<CalendarRoles>(role);
-    qDebug() << "model";
+
     switch (role_enum) {
     case RECEIPT_NO:
         return receipt[1];

@@ -10,7 +10,6 @@ Item {
     Component.onCompleted:
     {
         updatePageCount()
-        //test için yazılmış yazı
     }
     function updatePageCount(){
         pageNumberShow.text = calendarController.getCurrentPage()+"/"+Math.round(calendarController.getTotalQueryCount()/calendarController.getLimitSize())
